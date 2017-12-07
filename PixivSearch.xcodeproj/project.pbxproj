@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B19F6E4D36A45D925826690 /* Pods_PixivSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26A3D68FC5FDE4E98A746A0 /* Pods_PixivSearch.framework */; };
+		B43B5E131FCFB6B30068ED82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B5E121FCFB6B30068ED82 /* AppDelegate.swift */; };
+		B43B5E151FCFB6B30068ED82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B5E141FCFB6B30068ED82 /* ViewController.swift */; };
+		B43B5E181FCFB6B30068ED82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43B5E161FCFB6B30068ED82 /* Main.storyboard */; };
+		B43B5E1A1FCFB6B30068ED82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43B5E191FCFB6B30068ED82 /* Assets.xcassets */; };
+		B43B5E1D1FCFB6B30068ED82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43B5E1B1FCFB6B30068ED82 /* LaunchScreen.storyboard */; };
+		B43B5E2B1FCFB6D30068ED82 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B5E2A1FCFB6D30068ED82 /* ActionViewController.swift */; };
+		B43B5E2E1FCFB6D30068ED82 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43B5E2C1FCFB6D30068ED82 /* MainInterface.storyboard */; };
+		B43B5E321FCFB6D30068ED82 /* PixivSearchAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B43B5E281FCFB6D20068ED82 /* PixivSearchAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B4AD2F201FD6595C009AB041 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD2F1F1FD6595C009AB041 /* ImageViewCell.swift */; };
+		B4C019331FD90ECD008D4288 /* SearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C019321FD90ECD008D4288 /* SearchEngine.swift */; };
+		D3791DA4CCF3C5C97F8B29FE /* Pods_PixivSearchAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F23DD82CD05497C2E58F3F2 /* Pods_PixivSearchAction.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B43B5E301FCFB6D30068ED82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B43B5E071FCFB6B30068ED82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B43B5E271FCFB6D20068ED82;
+			remoteInfo = PixivSearchAction;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B43B5E361FCFB6D30068ED82 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B43B5E321FCFB6D30068ED82 /* PixivSearchAction.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		082036A99795CC526281E989 /* Pods-PixivSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixivSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixivSearch/Pods-PixivSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		0F23DD82CD05497C2E58F3F2 /* Pods_PixivSearchAction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixivSearchAction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4166A4FDDEE6AC9D012594CF /* Pods-PixivSearchAction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixivSearchAction.release.xcconfig"; path = "Pods/Target Support Files/Pods-PixivSearchAction/Pods-PixivSearchAction.release.xcconfig"; sourceTree = "<group>"; };
+		8CBE164AEB651A256CE1BFC9 /* Pods-PixivSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixivSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-PixivSearch/Pods-PixivSearch.release.xcconfig"; sourceTree = "<group>"; };
+		A26A3D68FC5FDE4E98A746A0 /* Pods_PixivSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixivSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43B5E0F1FCFB6B30068ED82 /* PixivSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixivSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43B5E121FCFB6B30068ED82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B43B5E141FCFB6B30068ED82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B43B5E171FCFB6B30068ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B43B5E191FCFB6B30068ED82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B43B5E1C1FCFB6B30068ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B43B5E1E1FCFB6B30068ED82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B43B5E281FCFB6D20068ED82 /* PixivSearchAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PixivSearchAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43B5E2A1FCFB6D30068ED82 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		B43B5E2D1FCFB6D30068ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B43B5E2F1FCFB6D30068ED82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4AD2F1F1FD6595C009AB041 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		B4C019321FD90ECD008D4288 /* SearchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
+		C7BF140E26629C5740F578A6 /* Pods-PixivSearchAction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixivSearchAction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixivSearchAction/Pods-PixivSearchAction.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B43B5E0C1FCFB6B30068ED82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B19F6E4D36A45D925826690 /* Pods_PixivSearch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43B5E251FCFB6D20068ED82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3791DA4CCF3C5C97F8B29FE /* Pods_PixivSearchAction.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B0EC6659CE247913B23EE19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				082036A99795CC526281E989 /* Pods-PixivSearch.debug.xcconfig */,
+				8CBE164AEB651A256CE1BFC9 /* Pods-PixivSearch.release.xcconfig */,
+				C7BF140E26629C5740F578A6 /* Pods-PixivSearchAction.debug.xcconfig */,
+				4166A4FDDEE6AC9D012594CF /* Pods-PixivSearchAction.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B43B5E061FCFB6B30068ED82 = {
+			isa = PBXGroup;
+			children = (
+				B43B5E111FCFB6B30068ED82 /* PixivSearch */,
+				B43B5E291FCFB6D30068ED82 /* PixivSearchAction */,
+				B43B5E101FCFB6B30068ED82 /* Products */,
+				9B0EC6659CE247913B23EE19 /* Pods */,
+				EAFB71B826FEF65708F8465C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B43B5E101FCFB6B30068ED82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B43B5E0F1FCFB6B30068ED82 /* PixivSearch.app */,
+				B43B5E281FCFB6D20068ED82 /* PixivSearchAction.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B43B5E111FCFB6B30068ED82 /* PixivSearch */ = {
+			isa = PBXGroup;
+			children = (
+				B43B5E121FCFB6B30068ED82 /* AppDelegate.swift */,
+				B43B5E141FCFB6B30068ED82 /* ViewController.swift */,
+				B43B5E161FCFB6B30068ED82 /* Main.storyboard */,
+				B43B5E191FCFB6B30068ED82 /* Assets.xcassets */,
+				B43B5E1B1FCFB6B30068ED82 /* LaunchScreen.storyboard */,
+				B43B5E1E1FCFB6B30068ED82 /* Info.plist */,
+			);
+			path = PixivSearch;
+			sourceTree = "<group>";
+		};
+		B43B5E291FCFB6D30068ED82 /* PixivSearchAction */ = {
+			isa = PBXGroup;
+			children = (
+				B43B5E2A1FCFB6D30068ED82 /* ActionViewController.swift */,
+				B4C019321FD90ECD008D4288 /* SearchEngine.swift */,
+				B4AD2F1F1FD6595C009AB041 /* ImageViewCell.swift */,
+				B43B5E2C1FCFB6D30068ED82 /* MainInterface.storyboard */,
+				B43B5E2F1FCFB6D30068ED82 /* Info.plist */,
+			);
+			path = PixivSearchAction;
+			sourceTree = "<group>";
+		};
+		EAFB71B826FEF65708F8465C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A26A3D68FC5FDE4E98A746A0 /* Pods_PixivSearch.framework */,
+				0F23DD82CD05497C2E58F3F2 /* Pods_PixivSearchAction.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B43B5E0E1FCFB6B30068ED82 /* PixivSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43B5E211FCFB6B30068ED82 /* Build configuration list for PBXNativeTarget "PixivSearch" */;
+			buildPhases = (
+				4238D2230C177A36EB2A167C /* [CP] Check Pods Manifest.lock */,
+				B43B5E0B1FCFB6B30068ED82 /* Sources */,
+				B43B5E0C1FCFB6B30068ED82 /* Frameworks */,
+				B43B5E0D1FCFB6B30068ED82 /* Resources */,
+				B43B5E361FCFB6D30068ED82 /* Embed App Extensions */,
+				F9551B0B0CF3139C18B72329 /* [CP] Embed Pods Frameworks */,
+				ECF1A82E2AB88066874E2F82 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B43B5E311FCFB6D30068ED82 /* PBXTargetDependency */,
+			);
+			name = PixivSearch;
+			productName = PixivSearch;
+			productReference = B43B5E0F1FCFB6B30068ED82 /* PixivSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B43B5E271FCFB6D20068ED82 /* PixivSearchAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43B5E331FCFB6D30068ED82 /* Build configuration list for PBXNativeTarget "PixivSearchAction" */;
+			buildPhases = (
+				30674352E5395466DAC75F74 /* [CP] Check Pods Manifest.lock */,
+				B43B5E241FCFB6D20068ED82 /* Sources */,
+				B43B5E251FCFB6D20068ED82 /* Frameworks */,
+				B43B5E261FCFB6D20068ED82 /* Resources */,
+				CBCCA096B189D05419803C36 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PixivSearchAction;
+			productName = PixivSearchAction;
+			productReference = B43B5E281FCFB6D20068ED82 /* PixivSearchAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B43B5E071FCFB6B30068ED82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = shino;
+				TargetAttributes = {
+					B43B5E0E1FCFB6B30068ED82 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					B43B5E271FCFB6D20068ED82 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B43B5E0A1FCFB6B30068ED82 /* Build configuration list for PBXProject "PixivSearch" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B43B5E061FCFB6B30068ED82;
+			productRefGroup = B43B5E101FCFB6B30068ED82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B43B5E0E1FCFB6B30068ED82 /* PixivSearch */,
+				B43B5E271FCFB6D20068ED82 /* PixivSearchAction */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B43B5E0D1FCFB6B30068ED82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43B5E1D1FCFB6B30068ED82 /* LaunchScreen.storyboard in Resources */,
+				B43B5E1A1FCFB6B30068ED82 /* Assets.xcassets in Resources */,
+				B43B5E181FCFB6B30068ED82 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43B5E261FCFB6D20068ED82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43B5E2E1FCFB6D30068ED82 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30674352E5395466DAC75F74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PixivSearchAction-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4238D2230C177A36EB2A167C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PixivSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBCCA096B189D05419803C36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PixivSearchAction/Pods-PixivSearchAction-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECF1A82E2AB88066874E2F82 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PixivSearch/Pods-PixivSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9551B0B0CF3139C18B72329 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PixivSearch/Pods-PixivSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PixivSearch/Pods-PixivSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B43B5E0B1FCFB6B30068ED82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43B5E151FCFB6B30068ED82 /* ViewController.swift in Sources */,
+				B43B5E131FCFB6B30068ED82 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43B5E241FCFB6D20068ED82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C019331FD90ECD008D4288 /* SearchEngine.swift in Sources */,
+				B4AD2F201FD6595C009AB041 /* ImageViewCell.swift in Sources */,
+				B43B5E2B1FCFB6D30068ED82 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B43B5E311FCFB6D30068ED82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B43B5E271FCFB6D20068ED82 /* PixivSearchAction */;
+			targetProxy = B43B5E301FCFB6D30068ED82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B43B5E161FCFB6B30068ED82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B43B5E171FCFB6B30068ED82 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B43B5E1B1FCFB6B30068ED82 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B43B5E1C1FCFB6B30068ED82 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B43B5E2C1FCFB6D30068ED82 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B43B5E2D1FCFB6D30068ED82 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B43B5E1F1FCFB6B30068ED82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B43B5E201FCFB6B30068ED82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B43B5E221FCFB6B30068ED82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082036A99795CC526281E989 /* Pods-PixivSearch.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R374EG3MSW;
+				INFOPLIST_FILE = PixivSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = space.shino.PixivSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B43B5E231FCFB6B30068ED82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CBE164AEB651A256CE1BFC9 /* Pods-PixivSearch.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R374EG3MSW;
+				INFOPLIST_FILE = PixivSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = space.shino.PixivSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B43B5E341FCFB6D30068ED82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7BF140E26629C5740F578A6 /* Pods-PixivSearchAction.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R374EG3MSW;
+				INFOPLIST_FILE = PixivSearchAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = space.shino.PixivSearch.PixivSearchAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B43B5E351FCFB6D30068ED82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4166A4FDDEE6AC9D012594CF /* Pods-PixivSearchAction.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R374EG3MSW;
+				INFOPLIST_FILE = PixivSearchAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = space.shino.PixivSearch.PixivSearchAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B43B5E0A1FCFB6B30068ED82 /* Build configuration list for PBXProject "PixivSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43B5E1F1FCFB6B30068ED82 /* Debug */,
+				B43B5E201FCFB6B30068ED82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B43B5E211FCFB6B30068ED82 /* Build configuration list for PBXNativeTarget "PixivSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43B5E221FCFB6B30068ED82 /* Debug */,
+				B43B5E231FCFB6B30068ED82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B43B5E331FCFB6D30068ED82 /* Build configuration list for PBXNativeTarget "PixivSearchAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43B5E341FCFB6D30068ED82 /* Debug */,
+				B43B5E351FCFB6D30068ED82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B43B5E071FCFB6B30068ED82 /* Project object */;
+}
