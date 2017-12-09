@@ -98,7 +98,11 @@ extension ActionViewController: UICollectionViewDelegate {
             let urlString = searchEngine.resultData[index].url
                 .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             let url = URL(string: urlString)!
-            UIApplication.shared.open(url, options: [:]) { _ in }
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:]) { _ in }
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         } else {
             let addIndex = searchEngine.hiddenResultData.count
             var indexArray = [IndexPath]()
