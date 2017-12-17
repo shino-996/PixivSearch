@@ -548,7 +548,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7BF140E26629C5740F578A6 /* Pods-PixivSearchAction.debug.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R374EG3MSW;
 				INFOPLIST_FILE = PixivSearchAction/Info.plist;
@@ -566,7 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4166A4FDDEE6AC9D012594CF /* Pods-PixivSearchAction.release.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R374EG3MSW;
 				INFOPLIST_FILE = PixivSearchAction/Info.plist;
