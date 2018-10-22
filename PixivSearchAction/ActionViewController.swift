@@ -40,15 +40,24 @@ class ActionViewController: UIViewController {
             }
         }
         let item = extensionContext!.inputItems.first as! NSExtensionItem
-        let provider = item.attachments!.first as! NSItemProvider
+        guard let provider = item.attachments?.first else {
+            print("Provider item error!")
+            return
+        }
         if provider.hasItemConformingToTypeIdentifier(kUTTypeImage as String) {
             provider.loadItem(forTypeIdentifier: kUTTypeImage as String, options: nil) { imageURL, error in
-                guard error == nil else {
+                if let error = error {
                     print(error)
                     return
                 }
-                self.imageURL = imageURL as! URL
-                self.activity.startAnimating()
+                guard let imageURL = imageURL else {
+                    print("No image URL!")
+                    return
+                }
+                self.imageURL = (imageURL as! URL)
+                DispatchQueue.main.async {
+                    self.activity.startAnimating()
+                }
                 self.searchEngine.search(self.imageURL)
             }
         }
@@ -98,7 +107,11 @@ extension ActionViewController: UICollectionViewDelegate {
             let urlString = searchEngine.resultData[index].url
                 .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             let url = URL(string: urlString)!
-            extensionContext?.open(url, completionHandler: nil)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
+            } else {
+                extensionContext?.open(url, completionHandler: nil)
+            }
         } else {
             let addIndex = searchEngine.hiddenResultData.count
             var indexArray = [IndexPath]()
@@ -111,4 +124,9 @@ extension ActionViewController: UICollectionViewDelegate {
             collectionView.insertItems(at: indexArray)
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
