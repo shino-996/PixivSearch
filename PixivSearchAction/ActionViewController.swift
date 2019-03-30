@@ -12,35 +12,43 @@ import MobileCoreServices
 class ActionViewController: UIViewController {
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var imageURL: URL!
     var searchEngine: SearchEngine!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchEngine = SearchEngine()
-        searchEngine.searchErrorHandle = {
+        searchEngine.searchErrorHandler = {
             let alertController = UIAlertController(title: "加载失败", message: "", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "返回", style: .cancel) { action in
-                self.done()
+            let cancelAction = UIAlertAction(title: "返回", style: .cancel) { [weak self] action in
+                self?.done()
             }
-            let continueAction = UIAlertAction(title: "重新加载", style: .default) { action in
-                self.searchEngine.search(self.imageURL)
+            let continueAction = UIAlertAction(title: "重新加载", style: .default) { [weak self] action in
+                self?.activity.startAnimating()
+                self?.searchEngine.search(self!.imageURL)
             }
             alertController.addAction(cancelAction)
             alertController.addAction(continueAction)
-            DispatchQueue.main.async {
-                self.activity.stopAnimating()
-                self.present(alertController, animated: true, completion: nil)
+            DispatchQueue.main.async { [weak self] in
+                self?.activity.stopAnimating()
+                self?.present(alertController, animated: true, completion: nil)
             }
         }
-        searchEngine.searchFinishHandle = {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-                self.activity.stopAnimating()
+        searchEngine.searchFinishHandler = {
+            DispatchQueue.main.async { [weak self] in
+                self?.collectionView.reloadData()
+                self?.activity.stopAnimating()
             }
         }
-        let item = extensionContext!.inputItems.first as! NSExtensionItem
-        guard let provider = item.attachments?.first else {
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let provider = (extensionContext?.inputItems.first as? NSExtensionItem)?.attachments?.first else {
             print("Provider item error!")
             return
         }
@@ -64,7 +72,10 @@ class ActionViewController: UIViewController {
     }
 
     @IBAction func done() {
-        self.extensionContext!.completeRequest(returningItems: self.extensionContext!.inputItems, completionHandler: nil)
+        guard let extensionContext = extensionContext else {
+            return;
+        }
+        extensionContext.completeRequest(returningItems: extensionContext.inputItems)
     }
 }
 
@@ -74,7 +85,7 @@ extension ActionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if searchEngine.haveSearched {
+        if searchEngine.isSearched {
             if searchEngine.showHiddenResult {
                 return searchEngine.resultData.count
             } else {
@@ -104,14 +115,9 @@ extension ActionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.row
         if index < searchEngine.resultData.count {
-            let urlString = searchEngine.resultData[index].url
-                .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+            let urlString = searchEngine.resultData[index].url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             let url = URL(string: urlString)!
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-            } else {
-                extensionContext?.open(url, completionHandler: nil)
-            }
+            UIApplication.shared.open(url, options: [:])
         } else {
             let addIndex = searchEngine.hiddenResultData.count
             var indexArray = [IndexPath]()
@@ -124,9 +130,4 @@ extension ActionViewController: UICollectionViewDelegate {
             collectionView.insertItems(at: indexArray)
         }
     }
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
-	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

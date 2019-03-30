@@ -1,16 +1,16 @@
 PODS:
-  - Fuzi (2.1.0)
+  - Kanna (4.0.3)
 
 DEPENDENCIES:
-  - Fuzi
+  - Kanna
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Fuzi
+    - Kanna
 
 SPEC CHECKSUMS:
-  Fuzi: 8c57344debff6d3a0c76a9e0f549152defdaaa48
+  Kanna: 0ebbdd0e7e3308f0aafbd569e79c8cadc5eb877c
 
-PODFILE CHECKSUM: 6f8358f13deef5e0b1ad8bfd33185da43dcdf371
+PODFILE CHECKSUM: 3fafdbbc562bc26b1568a106fa4747e95e3f5ea5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

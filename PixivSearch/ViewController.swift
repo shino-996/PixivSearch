@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        // workaround, 发一个网络请求弹出允许联网的提示
         let url = URL(string: "https://shino.space")!
         URLSession.shared.dataTask(with: url).resume()
     }

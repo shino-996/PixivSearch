@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'PixivSearch' do
   use_frameworks!
@@ -7,6 +7,6 @@ end
 target 'PixivSearchAction' do
   use_frameworks!
 
-  pod 'Fuzi'
+  pod 'Kanna'
 
 end
